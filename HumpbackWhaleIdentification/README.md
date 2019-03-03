@@ -14,20 +14,19 @@ new_whaleが9000枚以上存在し、それ以外の最も画像が多い種類�
 66/2131 で上位4％に入ることができた。初メダルの思い出深きコンペ。
 
 ## このコンペで重要だった技術
+### Image Hash
+同じ画像が複数紛れ込んでいたのでハッシュ化して同じものがあったら除外する方法が公開された。素晴らしい発想。下記Siamese Networkについても解説がある。
+<a href=https://www.kaggle.com/martinpiotte/whale-recognition-model-with-score-0-78563>
+https://www.kaggle.com/martinpiotte/whale-recognition-model-with-score-0-78563
+</a>
+
 ### Siamese Network
 One-Shot-Learning の代表例。2つのCNNを並列に並べて同じ画像であれば距離を近く、別の画像は遠くなるように学習する。
 具体的には高次元空間にどうやって配置するか(どのように画像をベクトル化するか)を学習する。
 lossはTriplet lossを使用した。これはアンカー画像を1枚用意し、アンカーと同じクラスなら近く、違うクラスなら遠くに配置するように学習するもの。
   
 Courseraのdeeplearning.aiでとても分かりやすく説明されている。
-### Image Hash
-同じ画像が複数紛れ込んでいたのでハッシュ化して同じものがあったら除外する方法が公開された。素晴らしい発想。Siamese Networkについても解説がある。
-<a href=https://www.kaggle.com/martinpiotte/whale-recognition-model-with-score-0-78563>
-https://www.kaggle.com/martinpiotte/whale-recognition-model-with-score-0-78563
-</a>
-  
-  
-上記を発展させた<a href=https://www.kaggle.com/seesee/siamese-pretrained-0-822>
+上記を組み合わせた<a href=https://www.kaggle.com/seesee/siamese-pretrained-0-822>
 このkernel
 </a>
 をメインにして、lap を lapjvに変更し、Colabで実行するように変更(毎回重みをクラウドストレージに退避する処理を追加)
