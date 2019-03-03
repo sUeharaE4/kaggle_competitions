@@ -75,7 +75,7 @@ SIFTがよさそうだったが特許とられているのでAKAZEを用いて�
 同一クラスと別クラスでそれほど特徴点の個数に差が出なかったのと閾値でかなり特徴点の個数が変わってしまったので、調整が大変そうなので見送った。
 同じクラス<img src="img_src/AKAZE_same.jpg" alt="AKAZE_same.jpg">
   
-別のクラス<img src="img_src/AKAZE_differece.jpg" alt="AKAZE_differece.jpg">
+別のクラス<img src="img_src/AKAZE_difference.jpg" alt="AKAZE_difference.jpg">
   
 <a href=https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork target="_blank">
 SuperPoint
